@@ -1,6 +1,6 @@
 import { assign, setup } from 'xstate'
 
-export const VideoPlayerMachine = setup({
+export const videoPlayerMachine = setup({
   types: {
     context: {} as { screenSize: 'small' | 'large' },
     events: {} as { type: 'open' | 'togglePlay' | 'close' | 'toggleSize' },
