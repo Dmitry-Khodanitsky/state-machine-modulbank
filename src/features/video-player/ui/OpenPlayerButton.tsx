@@ -1,15 +1,14 @@
 import { Button, Card, Flex } from 'antd'
 import { PlayCircleOutlined } from '@ant-design/icons'
 import { useVideoPlayer } from '../lib/useVideoPlayer'
+import cardImage from '../../../assets/friends.webp'
 
 export const OpenPlayerButton: React.FC = () => {
   const { send } = useVideoPlayer()
   return (
     <Flex justify="center" align="center" style={{ minHeight: '100vh' }}>
       <Card
-        cover={
-          <img src="src/assets/friends.webp" draggable={false} alt="friends" />
-        }
+        cover={<img src={cardImage} draggable={false} alt="friends" />}
         style={{ width: 300 }}
         actions={[
           <Button
