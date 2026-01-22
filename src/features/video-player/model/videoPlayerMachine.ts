@@ -15,7 +15,7 @@ export const videoPlayerMachine = setup({
   id: 'videoPlayer',
   initial: 'closed',
   context: {
-    screenSize: 'small',
+    screenSize: 'large',
   },
   states: {
     closed: {
