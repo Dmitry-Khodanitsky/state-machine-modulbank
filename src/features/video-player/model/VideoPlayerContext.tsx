@@ -1,5 +1,5 @@
 import { createActorContext } from '@xstate/react'
-import { videoPlayerMachine } from './VideoPlayerMachine'
+import { videoPlayerMachine } from './videoPlayerMachine'
 
 export const VideoPlayerContext = createActorContext(videoPlayerMachine)
 
