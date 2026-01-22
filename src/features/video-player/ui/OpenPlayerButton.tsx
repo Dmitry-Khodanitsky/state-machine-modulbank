@@ -8,7 +8,7 @@ export const OpenPlayerButton: React.FC = () => {
     <Flex justify="center" align="center" style={{ minHeight: '100vh' }}>
       <Card
         cover={
-          <img src="https://s0.rbk.ru/v6_top_pics/media/img/8/34/755823570765348.jpeg" />
+          <img src="src/assets/friends.webp" draggable={false} alt="friends" />
         }
         style={{ width: 300 }}
         actions={[
