@@ -39,17 +39,19 @@ export const VideoPlayer: React.FC = () => {
       open={isModalOpen}
       onCancel={() => VideoPlayerRef.send({ type: 'close' })}
       width={screenConfig[screenSize].modalWidth}
-      footer={[
-        <Button
-          key="resize"
-          icon={screenConfig[screenSize].icon}
-          onClick={() => VideoPlayerRef.send({ type: 'toggleSize' })}
-        ></Button>,
-        <Button
-          icon={isPlaying ? <PauseCircleOutlined /> : <PlayCircleOutlined />}
-          onClick={() => VideoPlayerRef.send({ type: 'togglePlay' })}
-        ></Button>,
-      ]}
+      footer={
+        <>
+          <Button
+            icon={screenConfig[screenSize].icon}
+            onClick={() => VideoPlayerRef.send({ type: 'toggleSize' })}
+          ></Button>
+
+          <Button
+            icon={isPlaying ? <PauseCircleOutlined /> : <PlayCircleOutlined />}
+            onClick={() => VideoPlayerRef.send({ type: 'togglePlay' })}
+          ></Button>
+        </>
+      }
     >
       <ReactPlayer
         src="https://cdn.flowplayer.com/d9cd469f-14fc-4b7b-a7f6-ccbfa755dcb8/hls/383f752a-cbd1-4691-a73f-a4e583391b3d/playlist.m3u8"
