@@ -1,4 +1,4 @@
-import { Button, Modal } from 'antd'
+import { Button, Modal, Space } from 'antd'
 import { useVideoPlayer } from '../lib/useVideoPlayer'
 import {
   FullscreenExitOutlined,
@@ -31,7 +31,7 @@ export const VideoPlayer: React.FC = () => {
       onCancel={() => send({ type: 'close' })}
       width={screenConfig[screenSize].modalWidth}
       footer={
-        <>
+        <Space>
           <Button
             icon={screenConfig[screenSize].icon}
             onClick={() => send({ type: 'toggleSize' })}
@@ -41,7 +41,7 @@ export const VideoPlayer: React.FC = () => {
             icon={isPlaying ? <PauseCircleOutlined /> : <PlayCircleOutlined />}
             onClick={() => send({ type: 'togglePlay' })}
           ></Button>
-        </>
+        </Space>
       }
     >
       <ReactPlayer
